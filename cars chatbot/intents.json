@@ -1,0 +1,75 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": ["Hi", "Hello", "Hey"],
+        "responses": ["Hello! How can I assist you with cars today?"]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": ["Goodbye", "Bye", "See you later"],
+        "responses": ["Goodbye! Have a great day."]
+      },
+      {
+        "tag": "thanks",
+        "patterns": ["Thank you", "Thanks", "Appreciate it"],
+        "responses": ["You're welcome! If you have any more questions, feel free to ask."]
+      },
+      {
+        "tag": "car_info",
+        "patterns": ["Tell me about cars", "What types of cars are there?", "Can you provide information about cars?"],
+        "responses": ["Sure! There are various types of cars available, such as sedans, SUVs, hatchbacks, sports cars, and electric cars. Each type has its own features and advantages. What specific information are you looking for?"]
+      },
+      {
+        "tag": "sedan",
+        "patterns": ["What is a sedan?", "Tell me about sedans", "Advantages of sedans"],
+        "responses": ["A sedan is a car body style characterized by its enclosed passenger compartment, separate trunk, and four doors. Sedans are known for their comfortable seating, spacious interiors, and smooth driving experience. They are popular among individuals and families for daily commuting and long drives."]
+      },
+      {
+        "tag": "suv",
+        "patterns": ["What is an SUV?", "Tell me about SUVs", "Advantages of SUVs"],
+        "responses": ["An SUV (Sport Utility Vehicle) is a versatile vehicle that combines elements of both a car and a truck. SUVs are known for their spaciousness, higher ground clearance, and ability to handle various terrains. They provide ample seating and cargo space, making them suitable for families and outdoor enthusiasts."]
+      },
+      {
+        "tag": "hatchback",
+        "patterns": ["What is a hatchback?", "Tell me about hatchbacks", "Advantages of hatchbacks"],
+        "responses": ["A hatchback is a car body style characterized by its rear door, which opens upward and provides access to a cargo area that is part of the passenger compartment. Hatchbacks are known for their practicality, compact size, and fuel efficiency. They offer a good balance between passenger space and cargo capacity."]
+      },
+      {
+        "tag": "sports_car",
+        "patterns": ["What is a sports car?", "Tell me about sports cars", "Advantages of sports cars"],
+        "responses": ["A sports car is a high-performance and typically two-seater automobile designed for exhilarating driving experiences. Sports cars are known for their speed, agility, and stylish design. They often feature powerful engine and performance."]
+      },
+      {
+        "tag": "car_brands",
+        "patterns": ["What are some popular car brands?", "Tell me about famous car manufacturers", "Which companies make cars?"],
+        "responses": ["There are numerous popular car brands, such as Toyota, Ford, Honda, BMW, Mercedes-Benz, Audi, Volkswagen, Tesla, and many more. Each brand has its own reputation, history, and range of models."]
+      },
+      {
+        "tag": "car_models",
+        "patterns": ["Can you suggest some car models?", "What are some popular car models?", "Tell me about different car models"],
+        "responses": ["There are a wide variety of car models available, each with its own unique features and specifications. Some popular car models include the Toyota Camry, Honda Civic, Ford Mustang, BMW 3 Series, Mercedes-Benz C-Class, Audi A4, Volkswagen Golf, and Tesla Model S. These models cater to different preferences and purposes, ranging from sedans to sports cars and electric vehicles."]
+      },
+      {
+        "tag": "car_features",
+        "patterns": ["What are some common car features?", "Tell me about car technology", "What advancements have been made in car features?"],
+        "responses": ["Modern cars come equipped with a range of advanced features and technologies. Some common car features include air conditioning, power steering, power windows, central locking, cruise control, GPS navigation systems, infotainment systems, Bluetooth connectivity, rearview cameras, advanced safety features like ABS and airbags, and even autonomous driving capabilities in some high-end models."]
+      },
+      {
+        "tag": "car_maintenance",
+        "patterns": ["How can I maintain my car?", "Tell me about car maintenance tips", "What are some important car maintenance practices?"],
+        "responses": ["Proper car maintenance is essential to keep your vehicle in good condition. Some important car maintenance practices include regular oil changes, tire rotations and alignments, checking and topping up fluid levels (such as coolant, brake fluid, and windshield washer fluid), replacing worn-out brake pads, keeping the battery terminals clean, and scheduling regular inspections by a qualified mechanic. It's also important to follow the manufacturer's recommended maintenance schedule."]
+      },
+      {
+        "tag": "car_purchase",
+        "patterns": ["What should I consider when buying a car?", "Tell me about car buying tips", "How to choose the right car?"],
+        "responses": ["When buying a car, consider factors such as your budget, your specific needs and preferences, the car's fuel efficiency, safety ratings, reliability, resale value, available features, and maintenance costs. It's also recommended to research and compare different models, read reviews, take test drives, and consider factors like insurance and financing options. Buying a car is a significant decision, so take your time and make an informed choice."]
+      },
+      {
+        "tag": "car_types",
+        "patterns": ["What are the different types of cars?", "Tell me about car body styles", "What types of vehicles are there?"],
+        "responses": ["There are several types of cars available, each designed for different purposes and lifestyles. Some common car types include sedans, SUVs (Sport Utility Vehicles), hatchbacks, coupes, convertibles, minivans, pickup trucks, and electric vehicles (EVs). Each type has its own unique characteristics and features."]
+      }
+    ]
+  }
+  

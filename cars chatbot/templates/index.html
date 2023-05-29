@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chatbot</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+        margin-top: 30px;
+      }
+
+      #chat-container {
+        height: 400px;
+        overflow-y: scroll;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 20px;
+        background-color: #fff;
+      }
+
+      #message-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #message-input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+        color: #333;
+        outline: none;
+      }
+
+      #send-button {
+        background-color: #2980b9;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        margin-left: 10px;
+        transition: background-color 0.3s;
+      }
+
+      #send-button:hover {
+        background-color: #1c6ea4;
+      }
+
+      .chat-message {
+        margin-bottom: 10px;
+      }
+
+      .user-message {
+        text-align: right;
+      }
+
+      .bot-message {
+        text-align: left;
+      }
+
+      .message-sender {
+        font-weight: bold;
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Chatbot</h1>
+    <div id="chat-container">
+      <div id="chat-history"></div>
+    </div>
+    <form id="message-form" action="/get_response" method="POST">
+      <input type="text" id="message-input" name="message" placeholder="Type your message..." autofocus required />
+      <button id="send-button" type="submit">Send</button>
+    </form>
+
+    <script>
+      // Add JavaScript code here
+      // For example, using JavaScript to update the chat history
+      const chatHistory = document.getElementById('chat-history');
+      const messageForm = document.getElementById('message-form');
+      const messageInput = document.getElementById('message-input');
+
+      messageForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const message = messageInput.value;
+        if (message.trim() !== '') {
+          addMessageToChat('User', message, 'user-message');
+          sendMessageToBot(message);
+          messageInput.value = '';
+        }
+      });
+
+      function addMessageToChat(sender, message, messageClass) {
+        const chatMessage = document.createElement('div');
+        chatMessage.classList.add('chat-message', messageClass);
+        chatMessage.innerHTML = `<span class="message-sender">${sender}:</span> ${message}`;
+        chatHistory.appendChild(chatMessage);
+        chatHistory.scrollTop = chatHistory.scrollHeight;
+      }
+
+      function sendMessageToBot(message) {
+        fetch('/get_response', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: `message=${encodeURIComponent(message)}`,
+        })
+          .then((response) => response.text())
+          .then((data) => {
+            addMessageToChat('Bot', data, 'bot-message');
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
+      }
+    </script>
+  </body>
+</html>
